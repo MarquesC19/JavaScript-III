@@ -13,15 +13,29 @@
 */
 
 // Principle 1
-
+function weak(){
+console.log(this.beverage)
+}
+const beverage= "orange juice";
 // code example for Window Binding
 
 // Principle 2
-
+let person = {
+name:'Marques',
+lastName:'Carter',
+fullName:function(){
+    return `${this.name} ${this.lastName}`;
+}
+};
 // code example for Implicit Binding
 
 // Principle 3
-
+const person = new Person('param');
+function Person(eyeColor){
+this.eyeColor=function() {
+console.log(`the color of my eyes is${eyeColor}`);
+}
+}
 // code example for New Binding
 
 // Principle 4
